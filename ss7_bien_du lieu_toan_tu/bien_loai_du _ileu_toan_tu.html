@@ -6,13 +6,14 @@
 </head>
 <body>
 <script>
-let physics = +prompt("Enter physics score:");
-let chemistri = +prompt("Enter chemistri score:");
-let biologi = +prompt("Enter  biologi score:");
-let tolal = physics + chemistri + biologi;
-let average = tolal / 3;
-document.write("điểm trung bình là : " + average + "<br>");
-document.write("tổng là : " + tolal);
+    let physicsGrade = +prompt("Enter physics score:");
+    let chemistryGrade = +prompt("Enter chemistry score:");
+    let biologyGrade = +prompt("Enter biology score:");
+
+    let total = physicsGrade + chemistryGrade + biologyGrade;
+    let average = total / 3;
+    document.write("tổng: " + total +"<br>")
+    document.write("trung bình: " + average);
 </script>
 </body>
 </html>
