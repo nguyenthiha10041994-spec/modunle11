@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ứng dụng máy tinh</title>
+</head>
+<input type=number placeholder="số thứ 1"id="so1">;
+<input type=number placeholder="số thứ 2"id="so2">;<br>
+<button onclick="cong()">cộng</button>
+<button onclick="tru()">trừ</button>
+<button onclick="nhan()">nhân</button>
+<button onclick="chia()">chia</button>
+<h3 id="ketqua">kết quả</h3>
+<script>
+    function cong(){
+        let a = + document.getElementById("so1").value;
+        let b = + document.getElementById("so2").value;
+        let kq=a+b;
+        document.getElementById("ketqua").innerHTML="kết quả"+ kq;
+    }
+    function tru(){
+        let a= + document.getElementById("so1").value;
+        let b= + document.getElementById("so2").value;
+        let kq=a-b;
+        document.getElementById("ketqua").innerHTML="kết quả"+kq;
+    }
+function nhan(){
+        let a= + document.getElementById("so1").value;
+        let b= + document.getElementById("so2").value;
+        let kq=a*b;
+        document.getElementById("ketqua").innerHTML="kêt quả"+ kq;
+}
+function chia(){
+    let a = + document.getElementById("so1").value;
+    let b = + document.getElementById("so2").value;
+    let kq=a/b;
+    document.getElementById("ketqua").innerHTML="kết quả"+ kq;
+}
+
+</script>
+</body>
+</html>
