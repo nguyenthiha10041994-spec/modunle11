@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính hoa hồng</title>
+</head>
+<body>
+<script>
+    let doanhSo=+prompt("nhập doanh số");
+    let hoaHong=0;
+    if (doanhSo<0){
+        alert("không hợp lệ")
+    }
+    else if (doanhSo<=5000000){
+        hoaHong=doanhSo*0.03;
+    }
+    else if (doanhSo<=10000000) {
+        hoaHong = doanhSo * 0.05;
+    }
+    else if (doanhSo<=100000000) {
+        hoaHong = doanhSo * 0.1;
+    }
+    else  { hoaHong = doanhSo*0.15;
+    }
+alert("Hoa hồng nhận được là: " + hoaHong + "vnd");
+</script>
+</body>
+</html>

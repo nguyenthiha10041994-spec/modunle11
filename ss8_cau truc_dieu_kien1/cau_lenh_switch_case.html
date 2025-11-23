@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Số ngày trong tháng</title>
+</head>
+<body>
+
+<h3>Nhập tháng:</h3>
+<input id="thang" type="number" placeholder="1 - 12">
+<button onclick="
+    let m = +document.getElementById('thang').value;
+    let kq = '';
+
+    switch (m) {
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            kq = 'Tháng ' + m + ' có 31 ngày';
+            break;
+
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            kq = 'Tháng ' + m + ' có 30 ngày';
+            break;
+         case 2:
+            kq = 'Tháng 2 có 28 hoặc 29 ngày';
+            break;
+default:
+            kq = 'Tháng không hợp lệ';
+    }
+document.getElementById('result').innerText = kq;
+">Tính số ngày</button>
+<p id="result"></p>
+</body>
+</html>

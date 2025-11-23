@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xếp loại học lưc sv</title>
+</head>
+<body>
+<script>
+  let baiKt=+prompt("nhập điểm kiểm tra:");
+  let diemGk=+prompt("nhập điểm giữa kì:");
+  let diemCk=+prompt("nhập điểm cuối kì:");
+  let dtb=(baiKt+diemGk*2+diemCk*3)/6;
+  let xepLoai = "";
+  if (dtb>=8){
+      xepLoai=("Giỏi:")}
+  else if(dtb>=6.5) {
+      xepLoai=("Khá")}
+  else if(dtb>=5) {
+      xepLoai=("Trung bình")}
+  else {
+      xepLoai=("yếu")}
+  alert("Điểm trung bình: " + dtb.toFixed(2) + "\nXếp loại: " + xepLoai);
+  </script>
+</body>
+</html>

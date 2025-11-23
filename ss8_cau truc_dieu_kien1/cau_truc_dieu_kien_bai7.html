@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cước điện thoại</title>
+</head>
+<body>
+<script>
+let soPhut=+prompt("nhập sô phút gọi");
+let phiThueBao=30000;
+let cuocGoi=0;
+let tongTien = cuocGoi + phiThueBao;
+if(soPhut<0){
+    alert("số phút không hợp lệ")
+} else if (soPhut<=100){
+    cuocGoi=soPhut*150;
+} else if (soPhut<=300){
+    cuocGoi=soPhut*150 + (soPhut-100)*120;
+}else {
+    cuocGoi = 100 * 150 + 200 * 120 + (soPhut - 300) * 100;
+}
+alert("Cước điện thoại là : " + tongTien + " VNĐ");
+
+</script>
+</body>
+</html>
