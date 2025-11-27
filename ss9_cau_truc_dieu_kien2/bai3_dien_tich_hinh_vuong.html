@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>diện tich hình vuông</title>
+</head>
+<body>
+<label>Nhập độ dài cạnh a:</label>
+<input type="number" id="canh">
+
+<button onclick="
+  let a = +document.getElementById('canh').value;
+if (a === '' || a <= 0) {
+document.getElementById('ketqua').innerText = 'Cạnh phải lớn hơn 0!';}
+else {
+    let s = a * a;
+document.getElementById('ketqua').innerText = 'Diện tích là: ' + s;}"
+>Tính diện tích</button>
+<p id="ketqua"></p>
+</body>
+</html>
