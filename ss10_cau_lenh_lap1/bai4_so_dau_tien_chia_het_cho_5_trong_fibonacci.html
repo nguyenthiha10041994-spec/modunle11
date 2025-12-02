@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>số chia hết cho 5 trong fibonacci</title>
+</head>
+<body>
+<script>
+ let a=0;
+ let b=1;
+ for( ;; ){
+     let c=a+b;
+     if( c% 5==0){
+         document.write("số chia hết cho 5 đầu tiên là :" + c);
+     break;}
+         a=b
+         b=c
+ }
+</script>
+</body>
+</html>

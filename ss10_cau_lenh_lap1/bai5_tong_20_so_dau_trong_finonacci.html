@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tổng 20 số đầu tiên trong finonacci</title>
+</head>
+<body>
+<script>
+  let a = 0;
+  let b = 1;
+  let tong = 0;
+  let count = 1;
+  for( ;; ){
+    tong += a;
+    let c = a + b;
+    if(count == 20){
+      document.write("Tổng 20 số đầu tiên là: " + tong);
+      break;}
+    a = b;
+    b = c;
+    count++;
+  }
+</script>
+</body>
+</html>

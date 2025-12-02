@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính tiền điện</title>
+</head>
+<body>
+<script>
+    let kwh = +prompt("Nhập số kWh tiêu thụ:");
+    let tien = 0;
+    if (kwh <= 100) {
+        tien = kwh * 1700;}
+    else if (kwh <= 200) {
+        tien = kwh * 1800;}
+    else {
+        tien = kwh * 2000;}
+    alert("Số tiền điện: " + tien + " VND");
+    console.log("Số tiền điện: " + tien + " VND");
+</script>
+</body>
+</html>
