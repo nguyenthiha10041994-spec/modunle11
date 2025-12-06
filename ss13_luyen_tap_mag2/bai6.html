@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm tất cả các ký tự '-'trong mảng và thay thế chúng bằng ký tự '_'.</title>
+</head>
+<body>
+<script>
+    let input = prompt("Nhập chuỗi:");
+    let array = [];
+    for (let i = 0; i < input.length; i++) {
+        array[i] = input[i];
+    }for (let i = 0; i < array.length; i++) {
+        if (array[i] === "-") array[i] = "_";
+    }let ketQua = "";
+    for (let i = 0; i < array.length; i++) {
+        ketQua += array[i];
+    }document.write("Kết quả: " + ketQua);
+</script>
+</body>
+</html>

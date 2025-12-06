@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>khai báo một mảng ký tự và kích thước của mảng</title>
+</head>
+<body>
+<script>
+    let array = ['m', '12', 'a', '9', 'r', '2', 'a', '0', 'h'];
+    let doDai = array.length;
+    let dem = 0;
+    for (let i = 0; i < doDai; i++) {
+        if (array[i] >= '0' && array[i] <= '9') {
+            dem++;
+        }
+    }document.write("Số ký tự dạng số (0-9) trong mảng là: " + dem);
+</script>
+</body>
+</html>
