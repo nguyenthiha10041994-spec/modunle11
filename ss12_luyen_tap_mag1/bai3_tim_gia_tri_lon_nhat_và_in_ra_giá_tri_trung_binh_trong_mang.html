@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm giá trị lớn nhất trong dãy và giá trị trung bình của dãy</title>
+</head>
+<body>
+<script>
+let array=[6,23,12,15,10,4,6,8,9,17];
+let max=array[0];
+let tong=0;
+for(let i=0;i<array.length;i++) {
+  if(array[i]>max){
+    max=array[i];
+  }tong=tong+array[i];
+}gtTrungBinh=tong/array.length;
+document.writeln("Số lớn nhất là:"+max+"<br>");
+document.writeln("Giá tri trung bình là:"+gtTrungBinh+"<br>");
+</script>
+</body>
+</html>

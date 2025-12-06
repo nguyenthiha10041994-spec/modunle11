@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm giá trị lớn nhất và vị trí của nó trong 10 phần tử</title>
+</head>
+<body>
+<script>
+let numbers=[4,6,19,12,15,10,7,8,9,17];
+let max=numbers[0]
+let viTri=numbers[0];
+for(let i=1;i<numbers.length;i++) {
+  if (numbers[i] > max) {
+    max=numbers[i];
+    viTri = [i];
+  }
+}document.writeln("Số lớn nhất là:"+max+"<br>");
+  document.writeln("Vị trí là:"+viTri+"<br>");
+</script>
+</body>
+</html>

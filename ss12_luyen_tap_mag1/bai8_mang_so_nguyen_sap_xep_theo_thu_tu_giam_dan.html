@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mảng sô nguyên sắp xếp theo thứ tự giảm dần</title>
+</head>
+<body>
+<script>
+  let array = [];
+  for (let i = 0; i < 10; i++) {
+    array[i] = +prompt("Nhập phần tử thứ " + i + ":");
+  }document.write("Mảng ban đầu: " + array + "<br>");
+  for (let i = 0; i < array.length - 1; i++) {
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[j] > array[i]) {
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+  } document.write("Mảng sau khi sắp xếp giảm dần: " + array);
+</script>
+</body>
+</html>

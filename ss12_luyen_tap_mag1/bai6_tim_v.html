@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm v trong mảng rồi in ra</title>
+</head>
+<body>
+<script>
+let array=[1, 2, 9, 10, 11, 22, 43, 19, 15];
+let v = +prompt("nhập v")
+for (let i = 0; i < array.length; i++) {
+  if (array[i] === v) {
+    document.write("V is in the array"+i+"<br>");
+      array.splice(i, 1);
+      array.push(0);
+      document.write("Mảng sau khi xóa V: " + array);
+    break;
+  }if (i === array.length - 1) {
+    document.write("V is not in the array")
+  }
+}
+</script>
+</body>
+</html>
