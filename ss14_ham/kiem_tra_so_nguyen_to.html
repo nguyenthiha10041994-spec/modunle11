@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số nguyên tố</title>
+</head>
+<body>
+<script>
+    function checkPrime(number){
+        if (number < 2) return false;
+        for (let i = 2; i < number; i++){
+            if (number % i === 0){
+                return false;
+            }
+        }return true;
+    }let number1 = +prompt("nhập số cần kiểm tra");
+    let result = checkPrime(number1);
+    (result) ? alert("Là số nguyên tố")
+        : alert("Không phải là số nguyên tố");
+</script>
+</body>
+</html>
