@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai9</title>
+</head>
+<body>
+<p id="ketQua"></p>
+<script>
+  function kiemTraCapLienKe() {
+      let n = +prompt("Nhập số phần tử của mảng (n là số chẵn):");
+      if (n <= 0 || n % 2 != 0) {
+          document.getElementById("ketQua").innerText =
+              "Số phần tử không hợp lệ!";
+          return;
+      }let mang = [];
+      for (let i = 0; i < n; i++) {
+          let giaTri = +prompt("Nhập phần tử thứ " + (i + 1));
+          mang.push(giaTri);
+      }let dung = true;
+      for (let i = 0; i < n; i = i + 2) {
+          if (mang[i] >= mang[i + 1]) {
+              dung = false;
+              break;
+          }}if (dung) {
+          document.getElementById("ketQua").innerText =
+              "Mảng: [" + mang + "]\nKết quả: OK";
+      } else {
+          document.getElementById("ketQua").innerText =
+              "Mảng: [" + mang + "]\nKết quả: NO";
+      }}kiemTraCapLienKe();
+  </script>
+</body>
+</html>

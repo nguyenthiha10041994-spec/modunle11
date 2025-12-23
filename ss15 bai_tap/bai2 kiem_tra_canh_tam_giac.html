@@ -6,19 +6,17 @@
 </head>
 <body>
 <script>
-    function checktriangle(x, y, z) {
+    function checkTriangle(x, y, z) {
         if (x <= 0 || y <= 0 || z <= 0) {
-            document.write("không phải là ba cạnh của một tam giác")
+            document.write("không phải là ba cạnh của một tam giác");
         } else if (x + y <= z || x + z <= y || y + z <= x) {
             document.write("không phải là ba cạnh của một tam giác");
         } else if (x*x + y*y === z*z || x*x + z*z === y*y ||
             y*y + z*z === x*x) {
-            document.write("là ba cạnh của một tam giác vuông")
+            document.write("là ba cạnh của một tam giác vuông");
         } else {
             document.write("chỉ là ba cạnh của một tam giác");
-        }
-    }
-    checktriangle(3,4,5)
+        }}checkTriangle(3,4,5)
 </script>
 </body>
 </html>

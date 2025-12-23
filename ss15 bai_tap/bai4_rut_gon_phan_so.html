@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rút gọn phân số</title>
+</head>
+<body>
+<p id="ketQua"></p>
+<script>
+    function find(x) {
+        let t = x.split("/");
+        if (t.length != 2 || isNaN(t[0]) || isNaN(t[1]) || t[1] == 0) {
+            document.write("không phải là phân số");
+            return;
+        }let a = parseInt(t[0]);
+        let b = parseInt(t[1]);
+        if (a == 0) {
+            document.write("0");
+            return;
+        }let ucln;
+        for (let i = Math.abs(a); i >= 1; i--) {
+            if (a % i == 0 && b % i == 0) {
+                ucln = i;
+                break;
+            }
+        }document.write(a / ucln + "/" + b / ucln);
+    }find(prompt("Nhập phân số:"));
+</script>
+</body>
+</html>

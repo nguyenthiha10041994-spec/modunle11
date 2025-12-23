@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra ch lẽ</title>
+</head>
+<body>
+<p id="ketQua"></p>
+<script>
+  function kiemTraMangChanLe() {
+    let n = +prompt("Nhập số phần tử của mảng:");
+    if (n <= 0) {
+      document.getElementById("ketQua").innerText =
+              "Số phần tử không hợp lệ!";
+      return;
+    }let mang = [];
+    let demChan = 0;
+    let demLe = 0;
+    for (let i = 0; i < n; i++) {
+      let giaTri = +prompt("Nhập phần tử thứ " + (i + 1));
+      mang.push(giaTri);
+      if (giaTri % 2 == 0) {
+        demChan = demChan + 1;
+      } else {
+        demLe = demLe + 1;
+      }}if (demChan == n) {
+      document.getElementById("ketQua").innerText =
+              "Mảng: [" + mang + "]\nKết quả: 1";
+    } else if (demLe == n) {
+      document.getElementById("ketQua").innerText =
+              "Mảng: [" + mang + "]\nKết quả: 0";
+    } else {
+      document.getElementById("ketQua").innerText =
+              "Mảng: [" + mang + "]\nKết quả: -1";
+    }}kiemTraMangChanLe();
+</script>
+</body>
+</html>

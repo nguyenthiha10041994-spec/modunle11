@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 7</title>
+</head>
+<body>
+<p id="ketQua"></p>
+<script>
+  function kiemTraMangKyTu() {
+      let n = +prompt("Nhập số phần tử của mảng ký tự:");
+      if (n <= 0) {
+          document.getElementById("ketQua").innerText =
+              "Số phần tử không hợp lệ!";
+          return;
+      }let mang = [];
+      let coSo = false;
+      let coChu = false;
+      for (let i = 0; i < n; i++) {
+          let kyTu = prompt("Nhập ký tự thứ " + (i + 1));
+          mang.push(kyTu);
+          if (kyTu >= '0' && kyTu <= '9') {
+              coSo = true;
+          }if ((kyTu >= 'a' && kyTu <= 'z') ||
+              (kyTu >= 'A' && kyTu <= 'Z')) {
+              coChu = true;
+          }}if (coSo == true && coChu == false) {
+          document.getElementById("ketQua").innerText =
+              "Mảng: [" + mang + "]\nKết quả: 1";
+      } else if (coSo == false && coChu == true) {
+          document.getElementById("ketQua").innerText =
+              "Mảng: [" + mang + "]\nKết quả: 0";
+      } else {
+          document.getElementById("ketQua").innerText =
+              "Mảng: [" + mang + "]\nKết quả: -1";
+      }}kiemTraMangKyTu();
+</script>
+</body>
+</html>

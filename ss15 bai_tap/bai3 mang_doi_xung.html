@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra mảng đối xứng</title>
+</head>
+<body>
+<p id="ketQua"></p>
+<script>
+    function kiemTraMangDoiXung() {
+        let n = +prompt("Nhập số phần tử của mảng:");
+        if (n <= 0) {
+            document.getElementById("ketQua").innerText =
+                "Số phần tử không hợp lệ!";
+            return;
+        }let mang = [];
+        for (let i = 0; i < n; i++) {
+            let giaTri = +prompt("Nhập phần tử thứ " + (i + 1));
+            mang.push(giaTri);
+        }let doiXung = true;
+        for (let i = 0; i < n / 2; i++) {
+            if (mang[i] != mang[n - 1 - i]) {
+                doiXung = false;
+                break;
+            }
+        }if (doiXung) {
+            document.getElementById("ketQua").innerText =
+                "Mảng la:" + mang + "Kết quả: OK";
+        } else {
+            document.getElementById("ketQua").innerText =
+                "Mảng là" + mang + "Kết quả: NO";
+        }}
+    kiemTraMangDoiXung();
+</script>
+</body>
+</html>
