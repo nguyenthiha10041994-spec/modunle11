@@ -6,7 +6,17 @@
 </head>
 <body>
 <script>
-
+    let n = +prompt("Nhập số có 4 chữ số:");
+    alert(findMaxNumber(n));
+    function findMaxNumber(n) {
+        if (n < 1000 || n > 9999) return -1;
+        let str = n.toString();
+        let max = 0;
+        for (let i = 0; i < str.length; i++) {
+            let newNumber = Number(str.slice(0, i) + str.slice(i + 1));
+            max = Math.max(max, newNumber);
+        }return max;
+    }
 </script>
 </body>
 </html>
