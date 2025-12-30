@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    function laNamNhuan(nam) {
+        if (nam % 400 === 0) {
+            return true;
+        }if (nam % 4 === 0 && nam % 100 !== 0) {
+            return true;
+        }return false;
+    }let thang;
+    do {
+        thang = Number(prompt("Nhập tháng (1 - 12):"));
+    } while (thang < 1 || thang > 12 || !Number.isInteger(thang));
+    let nam;
+    do {
+        nam = Number(prompt("Nhập năm (> 0):"));
+    } while (nam <= 0 || !Number.isInteger(nam));
+    let soNgay;
+    if (thang === 2) {
+        if (laNamNhuan(nam)) {
+            soNgay = 29;
+        } else {
+            soNgay = 28;
+        }
+    } else if (
+        thang === 1 || thang === 3 || thang === 5 ||
+        thang === 7 || thang === 8 || thang === 10 || thang === 12
+    ) {
+        soNgay = 31;
+    } else {
+        soNgay = 30;
+    }
+    alert("Tháng " + thang + " năm " + nam + " có " + soNgay + " ngày");
+</script>
+</body>
+</html>

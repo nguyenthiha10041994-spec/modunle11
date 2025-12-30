@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài4</title>
+</head>
+<body>
+<h3>Quản lí công nhân</h3>
+<table border="1">
+    <tr>
+        <th>STT</th>
+        <th>Họ và tên</th>
+        <th>Ngày sinh</th>
+        <th>Địa chỉ</th>
+        <th>Lương</th>
+        <th>Chức vụ</th>
+    </tr>
+    <tbody id="list"></tbody>
+</table>
+<script>
+    class CongNhan {
+        constructor(hoTen, ngaySinh, diaChi, luong, chucVu) {
+            this.hoTen = hoTen;
+            this.ngaySinh = ngaySinh;
+            this.diaChi = diaChi;
+            this.luong = luong;
+            this.chucVu = chucVu;
+        }
+    }let ds = [];
+    ds.push(new CongNhan("Trương Tấn A", "11-11-1997", "Quảng Nam", 2000, "Abc"));
+    ds.push(new CongNhan("Trương Tấn B", "11-11-1998", "Đà Nẵng", 2000, "Abc"));
+    ds.push(new CongNhan("Trương Tấn C", "11-11-1999", "Huế", 2000, "Abc"));
+    let html = "";
+    for (let i = 0; i < ds.length; i++) {
+        html += `
+        <tr>
+            <td>${i + 1}</td>
+            <td>${ds[i].hoTen}</td>
+            <td>${ds[i].ngaySinh}</td>
+            <td>${ds[i].diaChi}</td>
+            <td>${ds[i].luong}</td>
+            <td>${ds[i].chucVu}</td>
+        </tr>
+    `;
+    }
+    document.getElementById("list").innerHTML = html;
+</script>
+</body>
+</html>

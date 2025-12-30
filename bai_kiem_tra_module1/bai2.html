@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<h3>Kiểm tra số hoàn hảo</h3>
+<p id="ketQua"></p>
+<script>
+function laSoHoanHao(n){
+    if (n<=0 || !Number.isInteger(n)){
+        return false;
+    }let tong=0;
+    for (let i=1;i<=n/2;i++){
+        if (n%i===0){
+            tong +=i
+        }
+    }if (tong ===n) {
+        return true;
+    }else{
+        return false;
+    }}
+let n;
+do {
+    n = +prompt("Nhập số nguyên dương:");
+}while (n<=0||!Number.isInteger(n));
+let ketQua = laSoHoanHao(n);
+document.getElementById("ketQua").innerHTML =
+    "Số " + n + " là số hoàn hảo: " + ketQua;
+</script>
+</body>
+</html>

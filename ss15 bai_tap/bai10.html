@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai10</title>
+</head>
+<body>
+<script>
+  function checkString(chuoi) {
+    let nguyenAm = ['a', 'e', 'i', 'o', 'u'];
+    let ketQua = [];
+    chuoi = chuoi.toLowerCase();
+    for (let i = 0; i < chuoi.length; i++) {
+      let kyTu = chuoi[i];
+      if (nguyenAm.includes(kyTu) && ketQua.indexOf(kyTu) === -1) {
+        ketQua.push(kyTu);
+      }}return ketQua;
+  }
+  document.write("hello → [" + checkString("hello") + "]<br>");
+  document.write("Codegym DaNang A → [" + checkString("Codegym DaNang A") + "]");
+</script>
+</body>
+</html>
